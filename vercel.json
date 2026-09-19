@@ -1,0 +1,13 @@
+{
+  "_comment": "Vercel automatically sends 'Authorization: Bearer <CRON_SECRET>' on every cron invocation when CRON_SECRET is set in the project's Environment Variables (Settings → Environment Variables). Each cron route validates this header and returns 401 if it doesn't match. Add CRON_SECRET in the Vercel dashboard — no code changes needed.",
+  "crons": [
+    {
+      "path": "/api/cron/process-notifications",
+      "schedule": "*/15 * * * *"
+    },
+    {
+      "path": "/api/cron/generate-fee-notifications",
+      "schedule": "0 0 * * *"
+    }
+  ]
+}
